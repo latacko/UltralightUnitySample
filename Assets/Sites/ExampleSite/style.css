@@ -1,0 +1,15 @@
+body {
+    width: 100lvw;
+    height: 100lvh;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#clicked {
+    align-items: center;
+}

@@ -1,0 +1,8 @@
+﻿<Solution>
+  <Project Path="latackoUltralightUnity.csproj" />
+  <Project Path="Llatacko.Ultralightunity.Editor.Tests.csproj" />
+  <Project Path="Llatacko.Ultralightunity.csproj" />
+  <Project Path="latackoUltralightUnity.Editor.csproj" />
+  <Project Path="Llatacko.Ultralightunity.Tests.csproj" />
+  <Project Path="Llatacko.Ultralightunity.Editor.csproj" />
+</Solution>

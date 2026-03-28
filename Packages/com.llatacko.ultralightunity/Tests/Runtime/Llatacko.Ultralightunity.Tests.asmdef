@@ -1,0 +1,11 @@
+{
+    "name": "Llatacko.Ultralightunity.Tests",
+    "references": [
+        "Llatacko.Ultralightunity"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

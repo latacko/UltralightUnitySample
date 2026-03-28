@@ -1,0 +1,10 @@
+{
+    "name": "Llatacko.Ultralightunity.Editor",
+    "references": [
+      "Llatacko.Ultralightunity"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

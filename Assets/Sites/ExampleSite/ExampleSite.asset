@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abfde81eb7f67a0f4963a0104584fb2d, type: 3}
+  m_Name: ExampleSite
+  m_EditorClassIdentifier: latackoUltralightUnity::Latacko.UltralightUnity.WebPageSO
+  disabled: 0
+  fullPath: /mnt/Gry/__UNITY PROJECTS__/TestUltralight/Assets/Sites/ExampleSite
+  pagePath: ExampleSite
+  files:
+  - <Path>k__BackingField: 
+    <Ext>k__BackingField: .html
+    <Name>k__BackingField: index
+    Asset:
+      m_AssetGUID: 0689742c8498c9d988ce7e6b5a84f3c2
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - <Path>k__BackingField: 
+    <Ext>k__BackingField: .js
+    <Name>k__BackingField: script
+    Asset:
+      m_AssetGUID: ad15542d3145aebaa8866e223167a44f
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+  - <Path>k__BackingField: 
+    <Ext>k__BackingField: .css
+    <Name>k__BackingField: style
+    Asset:
+      m_AssetGUID: 1c2297c0195aac5fa912974e8e924234
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0

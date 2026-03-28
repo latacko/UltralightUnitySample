@@ -1,0 +1,14 @@
+{
+    "name": "Llatacko.Ultralightunity.Editor.Tests",
+    "references": [
+        "Llatacko.Ultralightunity.Editor",
+        "Llatacko.Ultralightunity"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

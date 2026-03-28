@@ -1,0 +1,21 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel Flip
+
+Texture2D<float4> Source;
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+
+[numthreads(8,8,1)]
+void Flip (uint3 id : SV_DispatchThreadID)
+{
+    uint width, height;
+    Result.GetDimensions(width, height);
+
+    uint x = id.x;
+    uint y = id.y;
+
+    if (x >= width || y >= height) return;
+
+    Result[id.xy] = Source.Load(int3(x, height - 1 - y, 0));
+}
