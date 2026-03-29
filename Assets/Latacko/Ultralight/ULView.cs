@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine.UI;
@@ -46,6 +45,7 @@ namespace Latacko.UltralightUnity
             WebView.LoadAdvancedEvent();
             WebView.ReadEmittedMessages();
             WebView.ReadMessageConsole();
+            WebView.ReadBaseEvents();
         }
 
         /// <summary>

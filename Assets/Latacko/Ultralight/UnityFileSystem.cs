@@ -6,9 +6,7 @@ using System.Threading;
 using UltralightSharedClasses.Classes;
 using UltralightSharedClasses.FileSystemStructs;
 using UltralightSharedClasses.Structs;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 namespace Latacko.UltralightUnity
 {

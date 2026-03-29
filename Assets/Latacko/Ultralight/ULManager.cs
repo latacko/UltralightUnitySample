@@ -1,4 +1,3 @@
-using Unity.VisualScripting.YamlDotNet.Core;
 using UnityEngine;
 
 namespace Latacko.UltralightUnity

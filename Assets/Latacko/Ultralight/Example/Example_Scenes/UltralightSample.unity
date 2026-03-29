@@ -705,6 +705,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UltralightManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5186820575531849415, guid: 6a76bef344c7071f2ba5ea3b2810ece4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186820575531849415, guid: 6a76bef344c7071f2ba5ea3b2810ece4, type: 3}
+      propertyPath: showUltralightLog
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6679124303490789160, guid: 6a76bef344c7071f2ba5ea3b2810ece4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

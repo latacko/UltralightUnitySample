@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Runtime.InteropServices;
-using Unity.Collections.LowLevel.Unsafe;
-using System.Threading;
 using System;
 
 namespace Latacko.UltralightUnity.Example

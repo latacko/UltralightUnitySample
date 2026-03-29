@@ -1,14 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.IO.MemoryMappedFiles;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
 using UltralightSharedClasses.Classes;
 using UltralightSharedClasses.StringHeaders;
 using UltralightSharedClasses.Structs;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 namespace Latacko.UltralightUnity
@@ -25,7 +21,7 @@ namespace Latacko.UltralightUnity
         const int BUFS = 3;
 
         #region Events
-        #pragma warning disable CS0067
+#pragma warning disable CS0067
         public delegate void OnTitleChangedHandler(string newTitle);
         public event OnTitleChangedHandler OnTitleChanged;
         public delegate void OnURLChangedHandler(string newUrl);
@@ -39,7 +35,7 @@ namespace Latacko.UltralightUnity
         public event OnMessageConsoleHandler OnMessageConsole;
         public delegate void MessageEmittedEvent(string sender, string json);
         public event MessageEmittedEvent MessageEmitted;
-        #pragma warning restore CS0067
+#pragma warning restore CS0067
         #endregion
 
         private readonly ViewHeader* header;
@@ -295,6 +291,30 @@ namespace Latacko.UltralightUnity
                 OnMessageConsole?.Invoke((ULMessageSource)_consoleHeader.source, (ULMessageLevel)_consoleHeader.level, stringList[0], _consoleHeader.line_number, _consoleHeader.column_number, stringList[1]);
 
                 header->messageConsoleEventRead++;
+            }
+        }
+
+        public void ReadBaseEvents()
+        {
+            while (header->baseEventsRead < header->baseEventsWrite)
+            {
+                int index = (int)(header->baseEventsRead % ChunksData.KEY_EVENT_CHUNKS);
+                BaseEvent* ev = (BaseEvent*)(basePtr + baseEventsOffset + index * sizeof(BaseEvent));
+
+                switch (ev->type)
+                {
+                    case UltralightSharedClasses.Enums.BaseEventType.OnDOMReady:
+                        OnDOMReady?.Invoke();
+                        break;
+                    case UltralightSharedClasses.Enums.BaseEventType.FinishLoading:
+                        OnFinishLoading?.Invoke();
+                        break;
+                    case UltralightSharedClasses.Enums.BaseEventType.BeginLoading:
+                        OnBeginLoading?.Invoke();
+                        break;
+                }
+
+                header->baseEventsRead++;
             }
         }
 
